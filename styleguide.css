@@ -1,0 +1,14 @@
+:root {
+  --darkorangebase: rgba(255, 159, 45, 1);
+  --lightbluebase: rgba(0, 133, 255, 1);
+  --lightredbase: rgba(233, 44, 44, 1);
+  --lightbackgroundorange: rgba(255, 255, 255, 1);
+  --lightbackgroundblue: rgba(255, 255, 255, 1);
+  --lightbackgroundred: rgba(255, 255, 255, 1);
+  --body-text-medium-medium-font-family: "Inter", Helvetica;
+  --body-text-medium-medium-font-weight: 500;
+  --body-text-medium-medium-font-size: 14px;
+  --body-text-medium-medium-letter-spacing: -0.28px;
+  --body-text-medium-medium-line-height: 20px;
+  --body-text-medium-medium-font-style: normal;
+}
