@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Custom Scrollbar for cleaner look */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #e5e7eb;
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #d1d5db;
+}
+
+/* Donut Chart CSS */
+.donut-chart {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: conic-gradient(
+            #fbbf24 0% 35%,   /* Orange - Study */
+            #c084fc 35% 60%,  /* Purple - Other */
+            #3b82f6 60% 100%  /* Blue - Work */
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.donut-hole {
+    width: 110px;
+    height: 110px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Calendar Grid Lines */
+.calendar-grid {
+    display: grid;
+    /* CHANGED: From 5 to 7 columns */
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-cell {
+    min-height: 120px;
+    border-bottom: 1px solid #f3f4f6;
+    border-right: 1px solid #f3f4f6;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background-color 0.2s;
+}
+
+/* CHANGED: Remove border on the 7th column (Sunday), not the 5th */
+.calendar-cell:nth-child(7n) {
+    border-right: none;
+}
+
+.calendar-cell:hover {
+    background-color: #f9fafb;
+}
+
+.today-highlight {
+    background-color: #fff;
+    box-shadow: inset 0 0 0 2px #374151; /* Dark border for selected state */
+}
+
+/* Transition for sidebars */
+.sidebar-panel {
+    transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    overflow-x: hidden;
+}
+.sidebar-hidden {
+    width: 0 !important;
+    opacity: 0;
+    border: none;
+    padding: 0;
+}
+
+/* Blur Overlay */
+#modal-overlay {
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.1);
+}

@@ -1,161 +1,238 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styleguide.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="preference">
-      <div class="text-wrapper">Select your Preference</div>
-      <p class="div">Let us know when you are usually feeling productive!</p>
-      <div class="rectangle"></div>
-      <div class="group">
-        <div class="group-2">
-          <div class="rectangle-2"></div>
-          <div class="s">S</div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task & Calendar Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/pref.css">
+</head>
+<body class="bg-gray-50 text-gray-800 h-screen flex flex-col overflow-hidden font-sans">
+
+<!-- === VIEW 1: PREFERENCES (Onboarding) === -->
+<div id="preferences-view" class="fixed inset-0 bg-white z-[60] flex flex-col items-center justify-center transition-opacity duration-500 overflow-y-auto">
+
+  <!-- Header -->
+  <div class="text-center mb-8 mt-10">
+    <h1 class="text-4xl font-bold text-gray-800 mb-2">Select your Preference</h1>
+    <p class="text-gray-500 font-light">Let us know when you are usually feeling productive!</p>
+  </div>
+
+  <!-- Main Card -->
+  <div class="bg-white rounded-3xl shadow-xl border border-gray-100 w-full max-w-4xl flex flex-col md:flex-row overflow-hidden mb-8 mx-4">
+
+    <!-- Left Column: Active Hours -->
+    <div class="p-8 md:w-1/2 border-b md:border-b-0 md:border-r border-gray-100 flex flex-col items-center">
+      <div class="w-full mb-6">
+        <h3 class="font-bold text-sm text-gray-900 mb-4">Select active hours</h3>
+
+        <!-- Day Selector -->
+        <div class="flex justify-between gap-1 mb-8">
+          <button class="day-btn w-8 h-8 rounded text-xs font-bold flex items-center justify-center bg-gray-200 text-gray-500 hover:bg-gray-300 transition-colors" onclick="toggleDay(this)">S</button>
+          <button class="day-btn w-8 h-8 rounded text-xs font-bold flex items-center justify-center bg-[#FACC15] text-gray-900 shadow-sm" onclick="toggleDay(this)">M</button>
+          <button class="day-btn w-8 h-8 rounded text-xs font-bold flex items-center justify-center bg-[#FACC15] text-gray-900 shadow-sm" onclick="toggleDay(this)">T</button>
+          <button class="day-btn w-8 h-8 rounded text-xs font-bold flex items-center justify-center bg-[#FACC15] text-gray-900 shadow-sm" onclick="toggleDay(this)">W</button>
+          <button class="day-btn w-8 h-8 rounded text-xs font-bold flex items-center justify-center bg-[#FACC15] text-gray-900 shadow-sm" onclick="toggleDay(this)">TH</button>
+          <button class="day-btn w-8 h-8 rounded text-xs font-bold flex items-center justify-center bg-[#FACC15] text-gray-900 shadow-sm" onclick="toggleDay(this)">F</button>
+          <button class="day-btn w-8 h-8 rounded text-xs font-bold flex items-center justify-center bg-gray-200 text-gray-500 hover:bg-gray-300 transition-colors" onclick="toggleDay(this)">S</button>
         </div>
-        <div class="group-2">
-          <div class="rectangle-3"></div>
-          <div class="text-wrapper-2">M</div>
-        </div>
-        <div class="group-2">
-          <div class="rectangle-3"></div>
-          <div class="text-wrapper-2">T</div>
-        </div>
-        <div class="group-2">
-          <div class="rectangle-3"></div>
-          <div class="text-wrapper-2">W</div>
-        </div>
-        <div class="group-2">
-          <div class="rectangle-3"></div>
-          <div class="t-h">Th</div>
-        </div>
-        <div class="group-2">
-          <div class="rectangle-3"></div>
-          <div class="text-wrapper-3">F</div>
-        </div>
-        <div class="group-2">
-          <div class="rectangle-2"></div>
-          <div class="text-wrapper-3">S</div>
-        </div>
-      </div>
-      <div class="clock">
-        <div class="ellipse"></div>
-        <div class="frame">
-          <div class="frame-2">
-            <div class="ellipse-2"></div>
-            <div class="text-wrapper-4">11</div>
-          </div>
-          <div class="frame-3">
-            <img class="line" src="img/line-2.svg" />
-            <img class="img" src="img/line-4-2.svg" />
-            <div class="ellipse-3"></div>
-          </div>
-          <div class="frame-4">
-            <div class="ellipse-2"></div>
-            <div class="text-wrapper-5">5</div>
+
+        <!-- Analog Clock -->
+        <div class="flex justify-center mb-8">
+          <div class="clock-face relative" id="clock-face">
+            <div class="clock-center"></div>
+
+            <!-- Start Hand (Dark) -->
+            <div id="clock-hand-start" class="clock-hand start" style="transform: rotate(180deg);"></div> <!-- Default 9 -->
+
+            <!-- End Hand (Yellow) -->
+            <div id="clock-hand-end" class="clock-hand end" style="transform: rotate(90deg);"></div> <!-- Default 6 -->
+
+            <!-- Numbers generated by JS -->
+
+            <!-- Inner circle aesthetics -->
+            <div class="absolute inset-0 rounded-full border-4 border-white pointer-events-none opacity-50"></div>
           </div>
         </div>
-        <div class="frame-5">
-          <div class="frame-2">
-            <div class="ellipse-2"></div>
-            <div class="text-wrapper-6">10</div>
+
+        <!-- Time Inputs -->
+        <div class="space-y-3 px-8">
+          <!-- Start Time Group -->
+          <div id="group-start" class="time-input-group flex items-center justify-between p-2 rounded-lg active" onclick="selectTimeMode('start')">
+            <label class="text-sm font-semibold text-gray-700 cursor-pointer">Start time</label>
+            <input type="text" id="pref-start-time" value="9:00 A.M." readonly class="bg-gray-100 text-sm font-bold text-gray-800 py-1 px-3 rounded text-center w-28 focus:outline-none cursor-pointer">
           </div>
-          <div class="frame-3">
-            <img class="line-2" src="img/line-2-4.svg" />
-            <img class="line-3" src="img/line-4-5.svg" />
-            <div class="ellipse-3"></div>
-          </div>
-          <div class="frame-4">
-            <div class="ellipse-2"></div>
-            <div class="text-wrapper-7">4</div>
-          </div>
-        </div>
-        <div class="frame-6">
-          <div class="frame-2">
-            <div class="ellipse-4"></div>
-            <div class="text-wrapper-8">9</div>
-          </div>
-          <div class="frame-3">
-            <img class="line-4" src="img/line-2-3.svg" />
-            <img class="line-5" src="img/line-4-3.svg" />
-            <div class="ellipse-3"></div>
-          </div>
-          <div class="frame-4">
-            <div class="ellipse-2"></div>
-            <div class="text-wrapper-8">3</div>
+
+          <!-- End Time Group -->
+          <div id="group-end" class="time-input-group flex items-center justify-between p-2 rounded-lg" onclick="selectTimeMode('end')">
+            <label class="text-sm font-semibold text-gray-700 cursor-pointer">End time</label>
+            <input type="text" id="pref-end-time" value="6:00 P.M." readonly class="bg-gray-100 text-sm font-bold text-gray-800 py-1 px-3 rounded text-center w-28 focus:outline-none cursor-pointer">
           </div>
         </div>
-        <div class="frame-7">
-          <div class="frame-2">
-            <div class="ellipse-2"></div>
-            <div class="text-wrapper-9">8</div>
-          </div>
-          <div class="frame-3">
-            <img class="line-6" src="img/image.svg" />
-            <img class="line-7" src="img/line-4.svg" />
-            <div class="ellipse-3"></div>
-          </div>
-          <div class="frame-4">
-            <div class="ellipse-2"></div>
-            <div class="text-wrapper-9">2</div>
-          </div>
-        </div>
-        <div class="frame-8">
-          <div class="frame-2">
-            <div class="ellipse-2"></div>
-            <div class="text-wrapper-10">7</div>
-          </div>
-          <div class="frame-3">
-            <img class="line-8" src="img/line-2-2.svg" />
-            <img class="line-9" src="img/line-4-4.svg" />
-            <div class="ellipse-3"></div>
-          </div>
-          <div class="frame-4">
-            <div class="ellipse-2"></div>
-            <div class="text-wrapper-11">1</div>
-          </div>
-        </div>
-        <div class="frame-9">
-          <div class="frame-2">
-            <div class="ellipse-2"></div>
-            <div class="text-wrapper-12">6</div>
-          </div>
-          <div class="frame-3">
-            <img class="line-10" src="img/line-2-5.svg" />
-            <img class="line-11" src="img/line-4-6.svg" />
-            <div class="ellipse-3"></div>
-          </div>
-          <div class="frame-4">
-            <div class="ellipse-2"></div>
-            <div class="text-wrapper-13">12</div>
-          </div>
-        </div>
-      </div>
-      <p class="p">Auto adjustment on missed schedule</p>
-      <div class="text-wrapper-14">Start time</div>
-      <div class="text-wrapper-15">End time</div>
-      <div class="text-wrapper-16">System appearance</div>
-      <div class="text-wrapper-17">Report frequency</div>
-      <div class="text-wrapper-18">Popup notifications</div>
-      <div class="text-wrapper-19">Settings Preference</div>
-      <div class="text-wrapper-20">Select active hours</div>
-      <div class="group-3">
-        <div class="rectangle-4"></div>
-        <div class="text-wrapper-21">8:00 A.M.</div>
-      </div>
-      <div class="group-4">
-        <div class="rectangle-4"></div>
-        <div class="text-wrapper-21">9:00 P.M.</div>
-      </div>
-      <img class="line-12" src="img/line-19.svg" />
-      <img class="icon-feathericons" src="img/toggle-left.svg" />
-      <div class="get-started">
-        <div class="div-wrapper"><div class="text-wrapper-22">Continue</div></div>
       </div>
     </div>
-  </body>
+
+    <!-- Right Column: Settings -->
+    <div class="p-8 md:w-1/2 flex flex-col">
+      <h3 class="font-bold text-sm text-gray-900 mb-8">Settings Preference</h3>
+
+      <div class="space-y-6">
+        <div class="flex items-center gap-4">
+          <div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
+            <input type="checkbox" name="toggle" id="toggle1" class="toggle-checkbox absolute block w-5 h-5 rounded-full bg-white border-4 appearance-none cursor-pointer border-gray-300 checked:border-gray-900 transition-all duration-300" checked/>
+            <label for="toggle1" class="toggle-label block overflow-hidden h-5 rounded-full bg-gray-300 cursor-pointer checked:bg-gray-900 transition-colors duration-300"></label>
+          </div>
+          <span class="text-sm font-medium text-gray-800">Auto adjustment on missed schedule</span>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
+            <input type="checkbox" name="toggle" id="toggle2" class="toggle-checkbox absolute block w-5 h-5 rounded-full bg-white border-4 appearance-none cursor-pointer border-gray-300 checked:border-gray-900 transition-all duration-300" checked/>
+            <label for="toggle2" class="toggle-label block overflow-hidden h-5 rounded-full bg-gray-300 cursor-pointer checked:bg-gray-900 transition-colors duration-300"></label>
+          </div>
+          <span class="text-sm font-medium text-gray-800">Popup notifications</span>
+        </div>
+
+        <div class="pt-4">
+          <button class="flex items-center justify-between w-full group" onclick="toggleAccordion('acc1')">
+            <span class="text-sm font-medium text-gray-800">System appearance</span>
+            <i data-lucide="chevron-down" id="icon-acc1" class="w-4 h-4 text-gray-500 transition-transform"></i>
+          </button>
+          <div id="acc1" class="hidden mt-2 pl-2 space-y-2 text-sm text-gray-500">
+            <div class="flex items-center gap-2 cursor-pointer hover:text-gray-900"><div class="w-3 h-3 rounded-full bg-white border border-gray-300"></div> Light</div>
+            <div class="flex items-center gap-2 cursor-pointer hover:text-gray-900"><div class="w-3 h-3 rounded-full bg-gray-900"></div> Dark</div>
+          </div>
+        </div>
+
+        <div>
+          <button class="flex items-center justify-between w-full group" onclick="toggleAccordion('acc2')">
+            <span class="text-sm font-medium text-gray-800">Report frequency</span>
+            <i data-lucide="chevron-down" id="icon-acc2" class="w-4 h-4 text-gray-500 transition-transform"></i>
+          </button>
+          <div id="acc2" class="hidden mt-2 pl-2 text-sm text-gray-500">
+            <p>Weekly</p>
+            <p>Monthly</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Continue Button -->
+  <button onclick="finishOnboarding()" class="bg-[#FACC15] text-gray-900 font-bold py-3 px-16 rounded-full shadow-lg hover:bg-yellow-400 hover:shadow-xl transition-all transform hover:-translate-y-0.5 mb-10">
+    Continue
+  </button>
+
+</div>
+
+<!-- === VIEW 2: DASHBOARD (Main App) === -->
+<div id="dashboard-view" class="flex-1 flex overflow-hidden opacity-0 pointer-events-none transition-opacity duration-500 h-full w-full">
+  <!-- MODAL OVERLAY (For Tasks) -->
+  <div id="modal-overlay" class="fixed inset-0 z-[70] hidden flex items-center justify-center">
+    <div class="bg-[#F2F2F2] w-[500px] h-[350px] rounded-3xl shadow-xl p-8 flex flex-col relative">
+      <div class="flex-1 flex flex-col justify-center">
+        <label class="text-xs text-gray-500 font-medium mb-1 ml-1">Entry name</label>
+        <input type="text" id="modal-task-title" placeholder="New Task" class="bg-transparent text-4xl font-normal text-gray-800 placeholder-gray-400 focus:outline-none w-full mb-8" oninput="updateDraftTask()">
+        <div class="flex gap-4 mb-4">
+          <div class="flex flex-col">
+            <label class="text-xs text-gray-500 font-medium mb-1 ml-1">Date</label>
+            <input type="date" id="modal-task-date" class="bg-white/50 px-3 py-2 rounded-lg text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-200" onchange="updateDraftTask()">
+          </div>
+          <div class="flex flex-col">
+            <label class="text-xs text-gray-500 font-medium mb-1 ml-1">Time</label>
+            <input type="time" id="modal-task-time" class="bg-white/50 px-3 py-2 rounded-lg text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-200" onchange="updateDraftTask()">
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-end gap-3 mt-auto">
+        <button onclick="cancelTaskModal()" class="px-6 py-2 rounded-full text-sm font-medium text-gray-600 hover:bg-black/5 transition-colors">Cancel</button>
+        <button onclick="saveTaskModal()" class="px-6 py-2 rounded-full text-sm font-medium bg-black text-white hover:bg-gray-800 transition-colors shadow-lg">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="w-64 bg-white border-r border-gray-200 flex flex-col justify-between shrink-0 z-20 relative">
+    <div>
+      <div class="p-6 flex items-center gap-3 mb-6">
+        <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-500"><i data-lucide="user" class="w-6 h-6"></i></div>
+        <div><h3 class="font-semibold text-sm text-gray-900">John Doe</h3><p class="text-xs text-gray-400">Pro Member</p></div>
+        <button class="ml-auto text-gray-400 hover:text-gray-600"><i data-lucide="bell" class="w-5 h-5"></i></button>
+      </div>
+      <nav class="px-4 space-y-1">
+        <button onclick="switchView('calendar')" class="w-full flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg group"><i data-lucide="calendar" class="w-5 h-5 text-gray-400 group-hover:text-gray-900"></i><span class="font-medium">Calendar</span></button>
+        <button id="nav-tasks" onclick="switchView('tasks')" class="w-full flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg group"><i data-lucide="check-square" class="w-5 h-5 text-gray-400 group-hover:text-gray-900"></i><span class="font-medium">Tasks</span></button>
+        <button id="nav-reports" onclick="switchView('reports')" class="w-full flex items-center gap-3 px-4 py-3 text-gray-900 bg-gray-100 rounded-lg group"><i data-lucide="bar-chart-2" class="w-5 h-5 text-gray-900"></i><span class="font-medium">Reports</span></button>
+      </nav>
+    </div>
+    <div class="p-4 space-y-1">
+      <a href="#" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"><i data-lucide="search" class="w-5 h-5 text-gray-400"></i><span class="font-medium">Search</span></a>
+      <!-- SETTINGS button now re-opens Preferences -->
+      <button onclick="openPreferences()" class="w-full flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"><i data-lucide="settings" class="w-5 h-5 text-gray-400"></i><span class="font-medium">Settings</span></button>
+      <a href="#" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"><i data-lucide="help-circle" class="w-5 h-5 text-gray-400"></i><span class="font-medium">Help</span></a>
+    </div>
+  </aside>
+
+  <!-- REPORTS SIDEBAR -->
+  <aside id="reports-sidebar" class="sidebar-panel w-80 bg-white border-r border-gray-200 flex flex-col overflow-y-auto shrink-0">
+    <div class="p-6 border-b border-gray-100 sticky top-0 bg-white z-10">
+      <div onclick="closeSidebars()" class="flex items-center gap-2 text-gray-500 mb-4 cursor-pointer hover:text-gray-800 transition-colors w-max"><i data-lucide="arrow-left" class="w-4 h-4"></i><span class="text-sm font-medium">Back</span></div>
+      <h2 id="report-date-header" class="text-xl font-bold text-gray-900 whitespace-nowrap">Sept 4, 2025</h2>
+    </div>
+    <div class="p-6 border-b border-gray-100 min-w-[320px]">
+      <div class="flex items-center gap-2 mb-4 text-gray-700 font-semibold"><i data-lucide="clock" class="w-4 h-4"></i><h3>Time Report</h3></div>
+      <div class="space-y-6">
+        <div><div class="flex justify-between text-xs font-semibold text-gray-800 mb-1"><span>Total Hours</span></div><div class="h-10 bg-gray-200 rounded overflow-hidden relative"><div class="absolute inset-0 flex gap-1"><div class="w-1 bg-white opacity-50 h-full"></div><div class="w-1 bg-white opacity-50 h-full"></div><div class="w-1 bg-white opacity-50 h-full"></div></div><div class="h-full bg-gray-300 w-[85%] flex items-center justify-end px-2"><span class="text-xs font-bold text-gray-800 whitespace-nowrap">10 Hours 45 mins</span></div></div></div>
+        <div><div class="flex justify-between text-xs font-semibold text-gray-800 mb-1"><span>Productive Hours</span></div><div class="h-10 bg-gray-200 rounded overflow-hidden"><div class="h-full bg-gray-300 w-[60%] flex items-center justify-end px-2"><span class="text-xs font-bold text-gray-800 whitespace-nowrap">6 Hours 00 mins</span></div></div></div>
+        <div><div class="flex justify-between text-xs font-semibold text-gray-800 mb-1"><span>Leisure Hours</span></div><div class="h-10 bg-gray-200 rounded overflow-hidden"><div class="h-full bg-gray-300 w-[45%] flex items-center justify-end px-2"><span class="text-xs font-bold text-gray-800 whitespace-nowrap">4 Hours 45 mins</span></div></div></div>
+      </div>
+    </div>
+    <div class="p-6 border-b border-gray-100 min-w-[320px]">
+      <div class="flex items-center gap-2 mb-6 text-gray-700 font-semibold"><i data-lucide="pie-chart" class="w-4 h-4"></i><h3>Category Report</h3></div>
+      <div class="flex flex-col items-center">
+        <div class="donut-chart relative shadow-sm">
+          <div class="absolute -top-2 -left-4 bg-gray-200 px-2 py-1 rounded shadow text-xs font-bold text-gray-700 z-10 whitespace-nowrap">Study: 5 hr</div>
+          <div class="donut-hole"><div class="w-full h-full rounded-full border-4 border-white"></div></div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- TASKS SIDEBAR -->
+  <aside id="tasks-sidebar" class="sidebar-panel sidebar-hidden w-80 bg-white border-r border-gray-200 flex flex-col overflow-y-auto shrink-0">
+    <div class="p-6 border-b border-gray-100 sticky top-0 bg-white z-10">
+      <div onclick="closeSidebars()" class="flex items-center gap-2 text-gray-500 mb-4 cursor-pointer hover:text-gray-800 transition-colors w-max"><i data-lucide="arrow-left" class="w-4 h-4"></i><span class="text-sm font-medium">Back</span></div>
+      <div class="flex items-center justify-between"><h2 class="text-xl font-bold text-gray-900 flex items-center gap-2"><i data-lucide="check-square" class="w-5 h-5"></i> Tasks</h2><div class="flex gap-2"><button class="text-gray-400 hover:text-gray-600"><i data-lucide="more-horizontal" class="w-5 h-5"></i></button></div></div>
+    </div>
+    <div class="flex-1 p-6 relative">
+      <div id="task-list-container" class="space-y-3"></div>
+      <button id="add-task-btn" onclick="openTaskModal()" class="mt-6 flex items-center gap-2 text-gray-500 hover:text-gray-900 transition-colors w-full p-2 rounded hover:bg-gray-50"><i data-lucide="plus" class="w-4 h-4"></i><span class="text-sm font-medium">New Task</span></button>
+    </div>
+  </aside>
+
+  <!-- MAIN CALENDAR -->
+  <main class="flex-1 flex flex-col h-full bg-white relative shrink-0">
+    <header class="h-20 border-b border-gray-200 flex items-center justify-between px-8 shrink-0">
+      <div class="flex items-center gap-4">
+        <button id="show-sidebar-btn" onclick="switchView('reports')" class="hidden p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-800 rounded-lg transition-colors" title="Show Reports"><i data-lucide="panel-left-open" class="w-6 h-6"></i></button>
+        <div class="flex items-baseline gap-2"><h1 id="calendar-title-month" class="text-3xl font-bold text-gray-900">Sept</h1><span id="calendar-title-year" class="text-3xl font-light text-gray-500">2025</span></div>
+      </div>
+      <div class="flex bg-gray-100 p-1 rounded-lg">
+        <button class="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-md">5-day</button>
+        <button class="px-4 py-1.5 text-sm font-medium bg-white text-gray-900 shadow-sm rounded-md ring-1 ring-gray-200">Week</button>
+        <button class="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-md">Month</button>
+      </div>
+    </header>
+    <div class="flex-1 overflow-y-auto">
+      <div class="grid grid-cols-5 border-b border-gray-200 sticky top-0 bg-white z-10">
+        <div class="py-3 px-4 text-xs font-bold text-gray-400 uppercase tracking-wider">Mon</div><div class="py-3 px-4 text-xs font-bold text-gray-400 uppercase tracking-wider">Tue</div><div class="py-3 px-4 text-xs font-bold text-gray-400 uppercase tracking-wider">Wed</div><div class="py-3 px-4 text-xs font-bold text-gray-400 uppercase tracking-wider">Thur</div><div class="py-3 px-4 text-xs font-bold text-gray-400 uppercase tracking-wider">Fri</div>
+      </div>
+      <div id="calendar-grid" class="calendar-grid pb-10"></div>
+    </div>
+  </main>
+</div>
+
+<script src="js/pref_script.js"></script>
+</body>
 </html>
