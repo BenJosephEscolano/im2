@@ -3462,3 +3462,1328 @@
   width: 24px;
   height: 24px;
 }
+
+.main-interface-task {
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 100%;
+  min-width: 1441px;
+  min-height: 1024px;
+  position: relative;
+}
+
+.main-interface-task .tasks-side-bar {
+  position: absolute;
+  top: -2px;
+  left: 217px;
+  width: 383px;
+  height: 1208px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 17px #0000001a;
+}
+
+.main-interface-task .upper-half {
+  position: absolute;
+  top: 26px;
+  left: 0;
+  width: 383px;
+  height: 88px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-interface-task .vector {
+  margin-left: 18.2px;
+  width: 11.75px;
+  height: 11.05px;
+  margin-top: -5.5px;
+}
+
+.main-interface-task .group {
+  margin-left: 19px;
+  width: 126px;
+  margin-top: 50.5px;
+  display: flex;
+  gap: 5px;
+}
+
+.main-interface-task .icon-tabler-icons {
+  width: 23px;
+  height: 23px;
+}
+
+.main-interface-task .text-wrapper {
+  margin-top: 1px;
+  width: 96px;
+  height: 20px;
+  font-family: "Red Hat Display-Bold", Helvetica;
+  font-weight: 700;
+  color: #3e3e3e;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.main-interface-task .line {
+  width: 383px;
+  height: 1px;
+  margin-top: 8.0px;
+  object-fit: cover;
+}
+
+.main-interface-task .div {
+  position: absolute;
+  top: 134px;
+  left: 31px;
+  width: 319px;
+  height: 91px;
+}
+
+.main-interface-task .rectangle {
+  position: absolute;
+  top: 4px;
+  left: 10px;
+  width: 299px;
+  height: 77px;
+  background-color: #d9d9d9;
+}
+
+.main-interface-task .text-wrapper-2 {
+  position: absolute;
+  top: 6px;
+  left: 16px;
+  width: 96px;
+  font-family: "Red Hat Display-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.main-interface-task .text-wrapper-3 {
+  position: absolute;
+  top: 48px;
+  left: 182px;
+  width: 127px;
+  font-family: "Red Hat Display-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.main-interface-task .rectangle-2 {
+  position: absolute;
+  top: 27px;
+  left: 0;
+  width: 315px;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.main-interface-task .rectangle-3 {
+  left: 124px;
+  width: 185px;
+  position: absolute;
+  top: 0;
+  height: 31px;
+  background-color: #ffffff;
+}
+
+.main-interface-task .rectangle-4 {
+  position: absolute;
+  top: 31px;
+  left: 23px;
+  width: 4px;
+  height: 58px;
+  background-color: #ffffff;
+}
+
+.main-interface-task .rectangle-5 {
+  position: absolute;
+  top: 31px;
+  left: 14px;
+  width: 4px;
+  height: 60px;
+  background-color: #ffffff;
+}
+
+.main-interface-task .rectangle-6 {
+  position: absolute;
+  top: 31px;
+  left: 34px;
+  width: 4px;
+  height: 56px;
+  background-color: #ffffff;
+}
+
+.main-interface-task .rectangle-7 {
+  position: absolute;
+  top: 31px;
+  left: 47px;
+  width: 4px;
+  height: 56px;
+  background-color: #ffffff;
+}
+
+.main-interface-task .rectangle-8 {
+  position: absolute;
+  top: 29px;
+  left: 62px;
+  width: 4px;
+  height: 58px;
+  background-color: #ffffff;
+}
+
+.main-interface-task .group-2 {
+  position: absolute;
+  top: 232px;
+  left: 30px;
+  width: 319px;
+  height: 91px;
+}
+
+.main-interface-task .text-wrapper-4 {
+  position: absolute;
+  top: 6px;
+  left: 16px;
+  width: 134px;
+  font-family: "Red Hat Display-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.main-interface-task .rectangle-9 {
+  position: absolute;
+  top: 0;
+  left: 147px;
+  width: 162px;
+  height: 31px;
+  background-color: #ffffff;
+}
+
+.main-interface-task .group-3 {
+  position: absolute;
+  top: 330px;
+  left: 30px;
+  width: 319px;
+  height: 91px;
+}
+
+.main-interface-task .upper-half-2 {
+  position: absolute;
+  top: 447px;
+  left: 0;
+  width: 383px;
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.main-interface-task .group-4 {
+  margin-left: 19px;
+  width: 154px;
+  display: flex;
+  gap: 5px;
+}
+
+.main-interface-task .text-wrapper-5 {
+  margin-top: 1px;
+  width: 124px;
+  height: 20px;
+  font-family: "Red Hat Display-Bold", Helvetica;
+  font-weight: 700;
+  color: #3e3e3e;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.main-interface-task .img {
+  width: 383px;
+  height: 1px;
+  object-fit: cover;
+}
+
+.main-interface-task .group-wrapper {
+  position: absolute;
+  width: 95px;
+  height: 37px;
+  top: 515px;
+  left: 19px;
+  display: flex;
+}
+
+.main-interface-task .group-5 {
+  width: 99px;
+  height: 37px;
+  position: relative;
+}
+
+.main-interface-task .rectangle-10 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95px;
+  height: 37px;
+  background-color: #d9d9d9;
+  border-radius: 9px;
+}
+
+.main-interface-task .text-wrapper-6 {
+  position: absolute;
+  top: 9px;
+  left: 7px;
+  width: 52px;
+  font-family: "Red Hat Display-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.main-interface-task .text-wrapper-7 {
+  position: absolute;
+  top: 9px;
+  left: 59px;
+  width: 31px;
+  font-family: "Red Hat Display-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.main-interface-task .ellipse {
+  position: absolute;
+  top: 546px;
+  left: 109px;
+  width: 9px;
+  height: 9px;
+  background-color: #d9d9d9;
+  border-radius: 4.5px;
+}
+
+.main-interface-task .ellipse-2 {
+  position: absolute;
+  top: 552px;
+  left: 118px;
+  width: 5px;
+  height: 5px;
+}
+
+.main-interface-task .ellipse-3 {
+  position: absolute;
+  top: 558px;
+  left: 123px;
+  width: 3px;
+  height: 3px;
+  background-color: #d9d9d9;
+  border-radius: 1.5px;
+}
+
+.main-interface-task .group-6 {
+  position: absolute;
+  width: 383px;
+  height: 430px;
+  top: 743px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-interface-task .upper-half-3 {
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.main-interface-task .group-7 {
+  margin-left: 19px;
+  width: 160px;
+  margin-top: 0;
+  display: flex;
+  gap: 5px;
+}
+
+.main-interface-task .weekly-report {
+  margin-top: 1px;
+  width: 130px;
+  height: 20px;
+  font-family: "Red Hat Display-Bold", Helvetica;
+  font-weight: 700;
+  color: #3e3e3e;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.main-interface-task .group-8 {
+  margin-left: 31px;
+  width: 319px;
+  height: 91px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.main-interface-task .text-wrapper-8 {
+  position: absolute;
+  top: 6px;
+  left: 16px;
+  width: 183px;
+  font-family: "Red Hat Display-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.main-interface-task .text-wrapper-9 {
+  position: absolute;
+  top: 48px;
+  left: 284px;
+  width: 25px;
+  font-family: "Red Hat Display-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.main-interface-task .rectangle-11 {
+  left: 177px;
+  width: 132px;
+  position: absolute;
+  top: 0;
+  height: 31px;
+  background-color: #ffffff;
+}
+
+.main-interface-task .group-9 {
+  margin-left: 30px;
+  width: 319px;
+  height: 91px;
+  position: relative;
+  margin-top: 7px;
+}
+
+.main-interface-task .text-wrapper-10 {
+  position: absolute;
+  top: 6px;
+  left: 16px;
+  width: 167px;
+  font-family: "Red Hat Display-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.main-interface-task .text-wrapper-11 {
+  position: absolute;
+  top: 48px;
+  left: 289px;
+  width: 20px;
+  font-family: "Red Hat Display-Bold", Helvetica;
+  font-weight: 700;
+  font-size: 15px;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.main-interface-task .rectangle-12 {
+  left: 183px;
+  width: 126px;
+  position: absolute;
+  top: 0;
+  height: 31px;
+  background-color: #ffffff;
+}
+
+.main-interface-task .group-10 {
+  margin-left: 30px;
+  width: 319px;
+  height: 91px;
+  position: relative;
+}
+
+.main-interface-task .graph {
+  position: absolute;
+  width: 48.05%;
+  height: 15.48%;
+  top: 43.05%;
+  left: 23.76%;
+}
+
+.main-interface-task .ellipse-4 {
+  position: absolute;
+  width: 100.00%;
+  height: 100.00%;
+  top: 0;
+  left: 0;
+}
+
+.main-interface-task .ellipse-5 {
+  position: absolute;
+  width: 100.00%;
+  height: 100.00%;
+  top: 13.57%;
+  left: 3.24%;
+}
+
+.main-interface-task .ellipse-6 {
+  position: absolute;
+  width: 101.59%;
+  height: 98.43%;
+  top: 8.97%;
+  left: 69.31%;
+}
+
+.main-interface-task .text-wrapper-12 {
+  position: absolute;
+  top: 53px;
+  left: 14px;
+  width: 111px;
+  font-family: "Red Hat Display-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.main-interface-task .frame {
+  display: flex;
+  flex-direction: column;
+  width: 840px;
+  height: 1024px;
+  align-items: flex-start;
+  position: absolute;
+  top: -2px;
+  left: 610px;
+  box-shadow: 0px 1px 1px #0000001f;
+}
+
+.main-interface-task .frame-2 {
+  display: flex;
+  align-items: center;
+  gap: 432px;
+  padding: 0px 10px 32px 0px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.main-interface-task .sept {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 151px;
+  height: 73px;
+  margin-top: -1.00px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 400;
+  color: #393939;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.main-interface-task .span {
+  font-weight: 700;
+}
+
+.main-interface-task .text-wrapper-13 {
+  font-family: "Inter-Regular", Helvetica;
+}
+
+.main-interface-task .group-11 {
+  position: relative;
+  width: 219px;
+  height: 37px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 0.5px solid;
+  border-color: #393939;
+}
+
+.main-interface-task .rectangle-13 {
+  position: absolute;
+  top: -1px;
+  left: 74px;
+  width: 71px;
+  height: 39px;
+  background-color: #dcdcdc;
+  border-radius: 5px;
+  border: 1px solid;
+  border-color: #353535;
+}
+
+.main-interface-task .frame-3 {
+  display: flex;
+  width: 186px;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  position: absolute;
+  top: 9px;
+  left: 16px;
+}
+
+.main-interface-task .text-wrapper-14 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Red Hat Display-Light", Helvetica;
+  font-weight: 300;
+  color: #393939;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.main-interface-task .text-wrapper-15 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Red Hat Display-Regular", Helvetica;
+  font-weight: 400;
+  color: #393939;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.main-interface-task .text-wrapper-16 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-right: -440.00px;
+  font-family: "Red Hat Display-Light", Helvetica;
+  font-weight: 300;
+  color: #393939;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.main-interface-task .frame-4 {
+  display: flex;
+  height: 43px;
+  align-items: flex-start;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  background-color: #fafafa;
+}
+
+.main-interface-task .div-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 187px;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 12px;
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  margin-bottom: -1.00px;
+  margin-left: -1.00px;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #e7e7e7;
+}
+
+.main-interface-task .text-wrapper-17 {
+  position: relative;
+  width: fit-content;
+  margin-top: -0.50px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #969696;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.main-interface-task .frame-5 {
+  display: flex;
+  flex-direction: column;
+  width: 187px;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 12px;
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  margin-bottom: -1.00px;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #e7e7e7;
+}
+
+.main-interface-task .frame-6 {
+  display: flex;
+  flex-direction: column;
+  width: 187px;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 12px;
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  margin-bottom: -1.00px;
+  margin-right: -86.00px;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #e7e7e7;
+}
+
+.main-interface-task .frame-7 {
+  display: flex;
+  flex-direction: column;
+  width: 187px;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 12px;
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  margin-bottom: -1.00px;
+  margin-right: -271.00px;
+  background-color: #ffffff;
+  border-radius: 0px 8px 0px 0px;
+  border: 1px solid;
+  border-color: #e7e7e7;
+}
+
+.main-interface-task .frame-8 {
+  display: flex;
+  flex-direction: column;
+  width: 187px;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 12px;
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  margin-bottom: -1.00px;
+  margin-right: -456.00px;
+  background-color: #ffffff;
+  border-radius: 8px 0px 0px 0px;
+  border: 1px solid;
+  border-color: #e7e7e7;
+}
+
+.main-interface-task .frame-9 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1076px;
+  height: 876px;
+  align-items: flex-start;
+  gap: 0px 0px;
+  position: relative;
+  margin-right: -236.00px;
+}
+
+.main-interface-task .DAY {
+  margin-top: -1.00px;
+  margin-left: -1.00px;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  width: 187px;
+  height: 194.6px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 12px;
+  position: relative;
+  border: 1px solid;
+  border-color: #e7e7e7;
+}
+
+.main-interface-task .element {
+  position: relative;
+  width: fit-content;
+  margin-top: -0.50px;
+  opacity: 0.4;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 21px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.main-interface-task .items {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 27px;
+}
+
+.main-interface-task .DAY-2 {
+  margin-top: -1.00px;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  width: 187px;
+  height: 194.6px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 12px;
+  position: relative;
+  border: 1px solid;
+  border-color: #e7e7e7;
+}
+
+.main-interface-task .items-2 {
+  height: 143px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.main-interface-task .DAY-3 {
+  display: flex;
+  flex-direction: column;
+  width: 187px;
+  height: 194.6px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 12px;
+  position: relative;
+  margin-top: -1.00px;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #e7e7e7;
+}
+
+.main-interface-task .text-wrapper-18 {
+  position: relative;
+  width: fit-content;
+  margin-top: -0.50px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  font-size: 21px;
+  white-space: nowrap;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.main-interface-task .DAY-4 {
+  margin-left: -1.00px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  width: 187px;
+  height: 194.6px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 12px;
+  position: relative;
+  border: 1px solid;
+  border-color: #e7e7e7;
+}
+
+.main-interface-task .items-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 2px;
+  flex: 0 0 auto;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.main-interface-task .tags {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 3px 4px;
+  position: relative;
+  flex: 0 0 auto;
+  border-radius: 4px;
+  background: linear-gradient(
+          0deg,
+          rgba(255, 150, 27, 0.1) 0%,
+          rgba(255, 150, 27, 0.1) 100%
+  ),
+  linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 255, 255, 1) 100%
+  );
+  background-color: var(--lightbackgroundorange);
+}
+
+.main-interface-task .text-wrapper-19 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: var(--darkorangebase);
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.main-interface-task .DAY-5 {
+  display: flex;
+  flex-direction: column;
+  width: 190px;
+  height: 197.6px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 12px;
+  position: relative;
+  background-color: #ffffff;
+  border: 5px solid;
+  border-color: #423d3d;
+}
+
+.main-interface-task .element-2 {
+  margin-top: -2.50px;
+  position: relative;
+  width: fit-content;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 21px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.main-interface-task .tags-2 {
+  background: linear-gradient(
+          0deg,
+          rgba(0, 133, 255, 0.1) 0%,
+          rgba(0, 133, 255, 0.1) 100%
+  ),
+  linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 255, 255, 1) 100%
+  );
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 3px 4px;
+  position: relative;
+  flex: 0 0 auto;
+  border-radius: 4px;
+  background-color: var(--lightbackgroundblue);
+}
+
+.main-interface-task .text-wrapper-20 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: var(--lightbluebase);
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.main-interface-task .DAY-6 {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  width: 187px;
+  height: 194.6px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 12px;
+  position: relative;
+  border: 1px solid;
+  border-color: #e7e7e7;
+}
+
+.main-interface-task .DAY-7 {
+  margin-bottom: -88.00px;
+  margin-left: -1.00px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  width: 187px;
+  height: 194.6px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 12px;
+  position: relative;
+  border: 1px solid;
+  border-color: #e7e7e7;
+}
+
+.main-interface-task .DAY-8 {
+  margin-bottom: -88.00px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  width: 187px;
+  height: 194.6px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 12px;
+  position: relative;
+  border: 1px solid;
+  border-color: #e7e7e7;
+}
+
+.main-interface-task .frame-wrapper {
+  flex-direction: column;
+  background: linear-gradient(
+          0deg,
+          rgba(255, 59, 59, 0.1) 0%,
+          rgba(255, 59, 59, 0.1) 100%
+  ),
+  linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 255, 255, 1) 100%
+  );
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 3px 4px;
+  position: relative;
+  flex: 0 0 auto;
+  border-radius: 4px;
+  background-color: var(--lightbackgroundred);
+}
+
+.main-interface-task .frame-10 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.main-interface-task .text-wrapper-21 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: var(--lightredbase);
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.main-interface-task .DAY-9 {
+  margin-bottom: -280.60px;
+  margin-left: -1.00px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  width: 187px;
+  height: 194.6px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 12px;
+  position: relative;
+  border: 1px solid;
+  border-color: #e7e7e7;
+}
+
+.main-interface-task .DAY-10 {
+  display: flex;
+  flex-direction: column;
+  width: 187px;
+  height: 194.6px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 12px;
+  position: relative;
+  margin-bottom: -280.60px;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #e7e7e7;
+}
+
+.main-interface-task .DAY-11 {
+  margin-bottom: -473.20px;
+  margin-left: -1.00px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  width: 187px;
+  height: 194.6px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 12px;
+  position: relative;
+  border: 1px solid;
+  border-color: #e7e7e7;
+}
+
+.main-interface-task .DAY-12 {
+  margin-bottom: -473.20px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  width: 187px;
+  height: 194.6px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 12px;
+  position: relative;
+  border: 1px solid;
+  border-color: #e7e7e7;
+}
+
+.main-interface-task .DAY-13 {
+  margin-bottom: -473.20px;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  width: 187px;
+  height: 194.6px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 12px;
+  position: relative;
+  border: 1px solid;
+  border-color: #e7e7e7;
+}
+
+.main-interface-task .side-bar {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 219px;
+  height: 1033px;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #b1b1b1;
+  box-shadow: 0px 0px 17px #00000026;
+}
+
+.main-interface-task .group-12 {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 189px;
+  height: 23px;
+  display: flex;
+}
+
+.main-interface-task .text-wrapper-22 {
+  margin-top: 2px;
+  width: 82px;
+  height: 20px;
+  margin-left: 9px;
+  font-family: "Red Hat Display-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #3e3e3e;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.main-interface-task .icon-ionicons {
+  width: 23px;
+  height: 23px;
+  margin-left: 50px;
+}
+
+.main-interface-task .group-13 {
+  position: absolute;
+  top: 968px;
+  left: 18px;
+  width: 114px;
+  height: 23px;
+  display: flex;
+  gap: 7px;
+}
+
+.main-interface-task .text-wrapper-23 {
+  margin-top: 2px;
+  width: 82px;
+  height: 20px;
+  font-family: "Red Hat Display-Regular", Helvetica;
+  font-weight: 400;
+  color: #3e3e3e;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.main-interface-task .group-14 {
+  position: absolute;
+  top: 940px;
+  left: 18px;
+  width: 114px;
+  height: 23px;
+  display: flex;
+  gap: 7px;
+}
+
+.main-interface-task .group-15 {
+  position: absolute;
+  top: 914px;
+  left: 18px;
+  width: 114px;
+  height: 27px;
+}
+
+.main-interface-task .text-wrapper-24 {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 82px;
+  font-family: "Red Hat Display-Regular", Helvetica;
+  font-weight: 400;
+  color: #3e3e3e;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.main-interface-task .icon-heroicons {
+  position: absolute;
+  width: 20.18%;
+  height: 84.54%;
+  top: 15.46%;
+  left: 0;
+}
+
+.main-interface-task .icon {
+  position: absolute;
+  width: 75.00%;
+  height: 75.00%;
+  top: 9.26%;
+  left: 9.24%;
+}
+
+.main-interface-task .group-16 {
+  position: absolute;
+  width: 110px;
+  height: 24px;
+  top: 81px;
+  left: 18px;
+  display: flex;
+}
+
+.main-interface-task .group-17 {
+  width: 112px;
+  display: flex;
+  gap: 4px;
+}
+
+.main-interface-task .icon-tabler-icons-2 {
+  width: 24px;
+  height: 24px;
+}
+
+.main-interface-task .text-wrapper-25 {
+  margin-top: 3px;
+  width: 82px;
+  height: 20px;
+  font-family: "Red Hat Display-Regular", Helvetica;
+  font-weight: 400;
+  color: #3e3e3e;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.main-interface-task .group-18 {
+  position: absolute;
+  top: 110px;
+  left: 19px;
+  width: 109px;
+  height: 21px;
+  display: flex;
+  gap: 6px;
+}
+
+.main-interface-task .icon-bootstrap {
+  width: 21px;
+  height: 21px;
+}
+
+.main-interface-task .group-19 {
+  margin-top: 1px;
+  width: 84px;
+  display: flex;
+}
+
+.main-interface-task .text-wrapper-26 {
+  width: 82px;
+  height: 20px;
+  font-family: "Red Hat Display-Regular", Helvetica;
+  font-weight: 400;
+  color: #3e3e3e;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.main-interface-task .group-20 {
+  position: absolute;
+  top: 138px;
+  left: 18px;
+  width: 112px;
+  height: 23px;
+  display: flex;
+  gap: 5px;
+}
+
+.main-interface-task .text-wrapper-27 {
+  margin-top: 1px;
+  width: 82px;
+  height: 20px;
+  font-family: "Red Hat Display-Bold", Helvetica;
+  font-weight: 700;
+  color: #3e3e3e;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
